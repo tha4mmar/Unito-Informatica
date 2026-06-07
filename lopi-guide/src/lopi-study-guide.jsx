@@ -885,14 +885,23 @@ export default function LopiStudyGuide() {
   const exercise = chapter.exercises[activeExercise];
 
   return (
-    <div style={{
-      fontFamily: "'Georgia', 'Times New Roman', serif",
-      background: "#0f0f13",
-      minHeight: "100vh",
-      color: "#e8e0d0",
-      display: "flex",
-      flexDirection: "column",
-    }}>
+<div style={{
+    fontFamily: "'Georgia', 'Times New Roman', serif",
+    background: "#0f0f13",
+    minHeight: "100vh",
+    color: "#e8e0d0",
+    display: "flex",
+    flexDirection: "column",
+  }}>
+    {/* AGGIUNGI QUESTO BLOCCO QUI SOTTO */}
+    <style>{`
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f0f13; /* Evita flash bianchi durante il caricamento */
+        overflow-x: hidden;
+      }
+    `}</style>
       {/* Header */}
       <div style={{
         background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
